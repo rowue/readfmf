@@ -1,0 +1,17 @@
+; -*- fmf-version: 1.0; coding: utf-8; delimeter: \t -*-
+; Full-Metadata Format as described in http://arxiv.org/abs/0904.1299
+; written by simplefmf 0.1 (python)
+[*reference]
+title: sample table with pyschopathical data orderings
+creator: Rolf Wuerdemann
+created: 2011-11-22 15:44:00+01:00
+place: Freiburg centre of materials research
+contact: rolf.wuerdemann@fmf.uni-freiburg.de
+[*table definitions]
+Atoms and distances: D
+[*data definitions: D]
+Atom Number one: n_1
+Atom Number two: n_2
+Distance: r_0(n_1, n_2) [Ang]
+[*data: D]
+0	1	5.000e+00
