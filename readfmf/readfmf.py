@@ -78,9 +78,19 @@ def preParseData(b):
     d = re.sub(dataExpr, preParseData, d)
     return preParsedData, d, str(localVar['fmf-version']), commentChar
 
+def reshapeData(preParsedData):
+    for table_sign in preParsedData.keys():
+        preParsedTable=preParsedData[table_sign]
+        shapelen=len(preParsedTable.shape)
+        if shapelen==1:
+            preParsedData[table_sign]= \
+                    preParsedTable.reshape((preParsedTable.shape[0],1))
+
+
 def stream2config(stream):
     fmfstring = stream.read()
     preParsedData, d, FMFversion, commentChar = preParseData(fmfstring)
+    reshapeData(preParsedData)
     if commentChar == "#":
         commentChar = "\#"
     from configobj import ConfigObj,ConfigObjError
