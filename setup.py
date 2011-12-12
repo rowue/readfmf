@@ -7,12 +7,16 @@ setup(name='readfmf',
     
     http://arxiv.org/abs/0904.1299 
     
-    This module gives a hackish way to write it.""",
-    version='0.1',
+    This module gives a hackish way to read it.
+    Consistency against the specifications of
+    http://arxiv.org/abs/0904.1299 is not verfied""",
+    version='0.1.1',
     author="unknown",
     author_email="unknown@fmf.uni-freiburg.de",
     maintainer="Rolf Würdemann",
     maintainer_email="Rolf.Wuerdemann@fmf.uni-freiburg.de",
+    install_requires=['numpy',
+                    ],
     license = "BSD",
     url="http://arxiv.org/abs/0904.1299",
     py_modules=['readfmf'],
